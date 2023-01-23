@@ -1,12 +1,13 @@
 
 const todoItems = [];
 function myFunction() {
-  let x = document.getElementById("myText").value;
+  let x = document.getElementById("taskname").innerHTML += document.querySelector("#newtask input").value;
   todoItems.push(x);
 
-  document.getElementById("tasks").innerHTML = todoItems.join("<br/>");
+  document.getElementById("taskname").innerHTML = todoItems.join("<br>")
   
   console.log(todoItems);
   
 }
+
 

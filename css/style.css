@@ -63,7 +63,7 @@ body{
     margin-top: 10px;
 }
 
-.task{
+ul li {
   border-radius: 5px;
   align-items: center;
   justify-content: space-between;
@@ -73,14 +73,32 @@ body{
   height: 50px;
   margin-bottom: 8px;
   padding: 5px 10px;
-  display: flex;
-}
-.task span{
+  
   font-family: 'Poppins',sans-serif;
   font-size: 15px;
   font-weight: 400;
+  display: flex;
 }
-.task button{
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Style the close button 
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}*/
+
+button{
   background-color: #0a2ea4;
   color: #ffffff;
   border: none;

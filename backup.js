@@ -33,6 +33,7 @@ function myFunction() {
   
   updateDom();
 
+
 console.log(todoItems);
 }
 

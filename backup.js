@@ -8,9 +8,12 @@ function deleteTask(el){
 
   console.log(todoItems);
  }
+
 let clicked = false;
 function sel(el) {
 
+ 
+  todoItems[el] = 'checked';
   let checked = true;
   //alert("The button was pressed");
 
@@ -22,10 +25,10 @@ function sel(el) {
  function updateDom() {
 
   let data = "";
-  let sortedItems = todoItems.sort();
-  for (let i = 0; i < sortedItems.length; i++) {
+  //let sortedItems = todoItems.sort();
+  for (let i = 0; i < todoItems.length; i++) {
     
-    data = data + `<li class="newtask"><input type="checkbox" onclick="sel(${i})" />${sortedItems[i]}
+    data = data + `<li class="newtask"> <input type="checkbox" onclick="sel(${i})" />${todoItems[i]}
     <button class="delete" onclick="deleteTask(${i})">
     <i class="far fa-trash-alt"></i>
     

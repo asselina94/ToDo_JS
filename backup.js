@@ -9,17 +9,34 @@ function deleteTask(el){
   console.log(todoItems);
  }
 
-let clicked = false;
+const arr = [];
 function sel(el) {
+  
+  arr.push({ value: todoItems[el], checked: false });
+  //index = arr.findIndex((obj => obj.value == 1));
+  //arr = arr.map(el=> ({'checked':true}));
+  //arr[0].checked = true;
+  for (let i = 0; i < arr.length; i++){
+    
+      arr[i].checked = true; 
+  }
 
- 
-  todoItems[el] = 'checked';
-  let checked = true;
-  //alert("The button was pressed");
+  let data = "";
+  //let sortedItems = todoItems.sort();
+  for (let i = 0; i < arr.length; i++) {
+    
+    data = data + `<li class="newtask"> <input type="checkbox" id ="mycheckbox" onclick="sel(${i})"/>${arr[i]}
+    <button class="delete" onclick="deleteTask(${i})">
+    <i class="far fa-trash-alt"></i>
+  
+          </button>
+    </li>`;
+  }
 
-  updateDom();
-
-  console.log(todoItems);
+  console.log(data);
+  //document.getElementById("tasks").innerHTML = data;
+  //console.log(el);
+  console.log(arr);
 }
 
  function updateDom() {
@@ -28,10 +45,10 @@ function sel(el) {
   //let sortedItems = todoItems.sort();
   for (let i = 0; i < todoItems.length; i++) {
     
-    data = data + `<li class="newtask"> <input type="checkbox" onclick="sel(${i})" />${todoItems[i]}
+    data = data + `<li class="newtask"> <input type="checkbox" class="mycheckbox" onclick="sel(${i})"/>${todoItems[i]}
     <button class="delete" onclick="deleteTask(${i})">
     <i class="far fa-trash-alt"></i>
-    
+  
           </button>
     </li>`;
  }

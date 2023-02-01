@@ -85,6 +85,7 @@ ul li:hover {
   background: #ddd;
 }
 
+
 /* Style the close button 
 .close {
   position: absolute;
@@ -107,4 +108,9 @@ button{
   height: 100%;
   width: 40px;
   border-radius: 5px;
+}
+.mycheckbox  {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
 }

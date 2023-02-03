@@ -11,8 +11,15 @@ function deleteTask(el){
 
 const arr = [];
 function sel(el) {
-  
-  arr.push({ value: todoItems[el], checked: false });
+  let x = todoItems[el];
+  let y = false;
+  //arr.push({ value: todoItems[el], checked: false });
+  //const arr = todoItems.map((todoItems[el],el) => {
+   // return { value:todoItems[el], checked: false};
+ // });
+  arr = todoItems.map((x,y) => ({value: x, checked: y}))
+  ({value: x, checked: y});
+
   //index = arr.findIndex((obj => obj.value == 1));
   //arr = arr.map(el=> ({'checked':true}));
   //arr[0].checked = true;

@@ -75,4 +75,3 @@ function myFunction() {
 console.log(todoItems);
 }
 
-

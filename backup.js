@@ -1,6 +1,21 @@
 
 const todoItems = [];
 
+const api_url = "https://jsonplaceholder.typicode.com/todos";
+
+async function getData(url) {
+
+  const response = await fetch(url);
+
+  let data_obj = await response.json();
+  console.log(data_obj);
+
+  
+  console.log(data);
+}
+
+getData(api_url);
+
 function deleteTask(el){
 
   let item = todoItems.splice(el, el);
@@ -9,20 +24,10 @@ function deleteTask(el){
   console.log(todoItems);
  }
 
-const arr = [];
+/*const arr = [];
 function sel(el) {
-  let x = todoItems[el];
-  let y = false;
-  //arr.push({ value: todoItems[el], checked: false });
-  //const arr = todoItems.map((todoItems[el],el) => {
-   // return { value:todoItems[el], checked: false};
- // });
-  arr = todoItems.map((x,y) => ({value: x, checked: y}))
-  ({value: x, checked: y});
-
-  //index = arr.findIndex((obj => obj.value == 1));
-  //arr = arr.map(el=> ({'checked':true}));
-  //arr[0].checked = true;
+  arr.push({ value: todoItems[el], checked: false });
+ 
   for (let i = 0; i < arr.length; i++){
     
       arr[i].checked = true; 
@@ -45,6 +50,7 @@ function sel(el) {
   //console.log(el);
   console.log(arr);
 }
+*/
 
  function updateDom() {
 
@@ -71,7 +77,7 @@ function myFunction() {
   
   updateDom();
 
-//let sortedItems = todoItems.sort();
+
 console.log(todoItems);
 }
 

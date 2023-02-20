@@ -9,9 +9,10 @@ async function getData(url) {
   console.log(data);
  
   
+
   data.forEach(element => {
     
-    todoItems.push(element.title);
+    todoItems = data.map(element => element.title);
     console.log(element.title);
     
   });
